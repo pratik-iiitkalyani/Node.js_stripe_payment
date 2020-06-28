@@ -70,6 +70,7 @@ var stripeHandler = StripeCheckout.configure({
 })
 
 function purchaseClicked() {
+    console.log("aSVb")
     var priceElement = document.getElementsByClassName('cart-total-price')[0]
     var price = parseFloat(priceElement.innerText.replace('$', '')) * 100
     stripeHandler.open({

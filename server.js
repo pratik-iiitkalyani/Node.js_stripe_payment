@@ -15,6 +15,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 app.get('/store', function(req, res) {
+  // console.log("SVxc")
   fs.readFile('items.json', function(error, data) {
     if (error) {
       res.status(500).end()
